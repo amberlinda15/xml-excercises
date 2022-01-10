@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="progress_tracking.xsl"?>
+<ProgressTracking xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="progress_tracking.xsd">
+	
+	<Teams>
+		<Team>
+			<ManagerId>41</ManagerId>
+			<TeamId>2</TeamId>
+			<MemberCount>5</MemberCount>
+			<TeamName>matrix</TeamName>
+		</Team>
+		<Team>
+			<ManagerId>35</ManagerId>
+			<TeamId>5</TeamId>
+			<MemberCount>8</MemberCount>
+			<TeamName>mother box</TeamName>
+		</Team>
+	</Teams>
+	
+	<TeamMembers>
+		<Member>
+			<MemberId>21</MemberId>
+			<TeamId>2</TeamId>
+			<FirstName>Aadarsh</FirstName>
+			<LastName>Verma</LastName>
+			<Gender>male</Gender>
+			<MobileNumber>856421475</MobileNumber>
+			<Email>adarshverma@gmail.com</Email>
+		</Member>
+		<Member>
+			<MemberId>15</MemberId>
+			<TeamId>5</TeamId>
+			<FirstName>Ankur</FirstName>
+			<LastName>Verma</LastName>
+			<Gender>male</Gender>
+			<MobileNumber>9852145758</MobileNumber>
+			<Email>ankurverma@gmail.com</Email>
+		</Member>
+	</TeamMembers>
+	
+	<Tasks>
+		<Task>
+			<TaskId>3</TaskId>
+			<TaskName>Technology identification</TaskName>
+			<TaskDescription> identify the technologies for the project</TaskDescription>
+		</Task>
+		<Task>
+			<TaskId>4</TaskId>
+			<TaskName>Project initialization</TaskName>
+			<TaskDescription></TaskDescription>
+		</Task>
+	</Tasks>
+	
+	<GanttChart>
+		<Schedule>
+			<StartDateTime>2022-01-10-06:00</StartDateTime>
+			<EndDateTime>2022-01-10-09:00</EndDateTime>
+			<TaskId>4</TaskId>
+			<TaskName>Project initialization</TaskName>
+			<Priority>high</Priority>
+		</Schedule>
+		
+		<Schedule>
+			<StartDateTime>2022-01-15-09:00</StartDateTime>
+			<EndDateTime>2022-01-15-11:00</EndDateTime>
+			<TaskId>8</TaskId>
+			<TaskName>Project initialization review</TaskName>
+			<Priority>high</Priority>
+		</Schedule>
+		
+		<Schedule>
+			<StartDateTime>2022-01-10-06:00</StartDateTime>
+			<EndDateTime>2022-01-10-09:00</EndDateTime>
+			<TaskId>6</TaskId>
+			<TaskName>minor fixes</TaskName>
+			<Priority>medium</Priority>
+		</Schedule>
+	</GanttChart>
+	
+	<TaskStatus>
+		<Task>
+			<TaskId>10</TaskId>
+			<PerCompeleted>55</PerCompeleted>
+			<Reports></Reports>
+		</Task>
+		<Task>
+			<TaskId>5</TaskId>
+			<PerCompeleted>30</PerCompeleted>
+			<Reports></Reports>
+		</Task>
+		<Task>
+			<TaskId>6</TaskId>
+			<PerCompeleted>80</PerCompeleted>
+			<Reports></Reports>
+		</Task>
+		<Task>
+			<TaskId>7</TaskId>
+			<PerCompeleted>10</PerCompeleted>
+			<Reports></Reports>
+		</Task>
+		<Task>
+			<TaskId>1</TaskId>
+			<PerCompeleted>100</PerCompeleted>
+			<Reports></Reports>
+		</Task>
+	</TaskStatus>
+</ProgressTracking>

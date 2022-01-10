@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pt:schema xmlns:pt="http://www.w3.org/2001/XMLSchema" >
+	<pt:element name="ProgressTracking">
+	<pt:complexType>
+	<pt:sequence>
+		<pt:element name="Teams">
+			<pt:complexType>
+			<pt:sequence>
+				<pt:element name="Team" maxOccurs="unbounded">
+				<pt:complexType>
+				<pt:sequence>
+					<pt:element name="ManagerId" type="pt:integer"></pt:element>
+					<pt:element name="TeamId" type="pt:integer"></pt:element>
+					<pt:element name="MemberCount" type="pt:integer"></pt:element>
+					<pt:element name="TeamName" type="pt:string"></pt:element>
+				</pt:sequence>
+				</pt:complexType>
+				</pt:element>
+			</pt:sequence>
+			</pt:complexType>
+		</pt:element>
+		
+		<pt:element name="TeamMembers">
+			<pt:complexType>
+			<pt:sequence>
+				<pt:element name="Member" maxOccurs="unbounded">
+				<pt:complexType>
+				<pt:sequence>
+					<pt:element name="MemberId" type="pt:integer"></pt:element>
+					<pt:element name="TeamId" type="pt:integer"></pt:element>
+					<pt:element name="FirstName" type="pt:string"></pt:element>
+					<pt:element name="LastName" type="pt:string"></pt:element>
+					<pt:element name="Gender">
+						<pt:simpleType>
+							<pt:restriction base="pt:string">
+								<pt:pattern value="male|female"></pt:pattern>
+							</pt:restriction>
+						</pt:simpleType>
+					</pt:element>
+					<pt:element name="MobileNumber">
+						<pt:simpleType>
+							<pt:restriction base="pt:integer">
+								<pt:length value="10"/>
+							</pt:restriction>
+						</pt:simpleType>
+					</pt:element>
+					<pt:element name="Email" type="pt:string"></pt:element>
+				</pt:sequence>
+				</pt:complexType>
+				</pt:element>
+			</pt:sequence>
+			</pt:complexType>
+		</pt:element>
+		
+		<pt:element name="Tasks">
+			<pt:complexType>
+			<pt:sequence>
+				<pt:element name="Task" maxOccurs="unbounded">
+				<pt:complexType>
+				<pt:sequence>
+					<pt:element name="TaskId" type="pt:integer"></pt:element>
+					<pt:element name="TaskName" type="pt:string"></pt:element>
+					<pt:element name="TaskDescription" type="pt:string"></pt:element>
+				</pt:sequence>
+				</pt:complexType>
+				</pt:element>
+			</pt:sequence>
+			</pt:complexType>
+		</pt:element>
+		
+		<pt:element name="GanttChart">
+			<pt:complexType>
+			<pt:sequence>
+				<pt:element name="Schedule" maxOccurs="unbounded">
+				<pt:complexType>
+				<pt:sequence>
+					<pt:element name="StartDateTime" type="pt:date"></pt:element>
+					<pt:element name="EndDateTime" type="pt:date"></pt:element>
+					<pt:element name="TaskId" type="pt:integer"></pt:element>
+					<pt:element name="TaskName" type="pt:string"></pt:element>
+					<pt:element name="Priority" type="pt:string"></pt:element>
+				</pt:sequence>
+				</pt:complexType>
+				</pt:element>
+			</pt:sequence>
+			</pt:complexType>
+		</pt:element>
+		
+		<pt:element name="TaskStatus">
+			<pt:complexType>
+			<pt:sequence>
+				<pt:element name="Task" maxOccurs="unbounded">
+				<pt:complexType>
+				<pt:sequence>
+					<pt:element name="TaskId" type="pt:integer"></pt:element>
+					<pt:element name="PerCompeleted" type="pt:integer"></pt:element>
+					<pt:element name="Reports" type="pt:string"></pt:element>
+				</pt:sequence>
+				</pt:complexType>
+				</pt:element>
+			</pt:sequence>
+			</pt:complexType>
+		</pt:element>
+		
+	</pt:sequence>
+	</pt:complexType>
+	</pt:element>
+</pt:schema>
